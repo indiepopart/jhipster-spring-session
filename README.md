@@ -50,18 +50,6 @@ OKTA_OAUTH2_ISSUER={yourOrgUrl}/oauth2/default
 OKTA_OAUTH2_CLIENT_ID={clientId}
 OKTA_OAUTH2_CLIENT_SECRET={clientSecret}
 ```
-Before running the services, the JHipster services require to assign roles to the Okta user, to be able to create and modify entities.
-
-Sin in to [Okta](https://www.okta.com/login/) with your user account. Then, in the top menu, go to **Users**/**Groups** and create groups `ROLE_USER` and `ROLE_ADMIN`. The assign a user to those groups.
-
-Now, in the top menu, choose **API**/**Authorization Servers**. Edit the **default** authorization server. Go to **Claims** and **Add Claim**. Assign the following configuration:
-
-- Name: groups
-- Include in token type: ID Token, Always
-- Value type: Groups
-- Filter: Matches regex, .*
-- Include in: Any scope
-
 
 ## Run with Docker Compose
 
